@@ -161,10 +161,10 @@ const App = () => {
       
     {/* Navbar */}
 <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-3 z-50 bg-black text-white shadow-md">
-  <h1 className="text-2xl font-bold">BHAVIKA PACHAURI</h1>
+  <h1 className="text-xl font-bold">BHAVIKA PACHAURI</h1>
 
   {/* Desktop Menu */}
-  <ul className="hidden md:flex space-x-6">
+  <ul className="hidden md:flex md:space-x-5 space-x-4">
     {["Home", "Projects", "Services", "About", "Skills", "Contact"].map((item, index) => (
       <li key={index} className="relative cursor-pointer group">
         <a href={`#${item.toLowerCase()}`} className="hover:text-gray-300 text-white" style={{textDecoration:"none"}}>
@@ -176,7 +176,7 @@ const App = () => {
   </ul>
 
   {/* Social Links */}
-  <div className="hidden md:flex space-x-4">
+  <div className="hidden md:flex md:space-x-4 space-x-3 mx-4 ">
     {[
       { Icon: FaLinkedin, link: "https://www.linkedin.com/in/bhavika-pachauri/" },
       { Icon: FaGithub, link: "https://github.com/BhavikaPachauri/" },
@@ -225,7 +225,7 @@ const App = () => {
 </nav>
 
       
-    <section id="home" className="relative flex flex-col md:flex-row items-center justify-center h-screen p-6 space-y-6 md:space-y-0 md:space-x-10 bg-[#0a192f] overflow-hidden">
+    <section id="home" className="relative flex flex-col md:flex-row items-center justify-center h-screen mt-10 space-y-6 md:space-y-0 md:space-x-10 bg-[#0a192f] overflow-hidden">
       {/* Sparkle Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         {sparkles.map((sparkle) => (
@@ -250,7 +250,7 @@ const App = () => {
 
       {/* Profile Image with Hover & Glow Effect */}
       <motion.div
-        className="hero relative w-40 h-40 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg shadow-purple-500/50"
+        className="hero relative top-10 md:top-0 mb-5 w-40 h-40 md:w-48 md:h-48 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg shadow-purple-500/50"
         whileHover={{
           scale: 1.1,
           rotate: 5,
@@ -269,12 +269,12 @@ const App = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg"
+          className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg   "
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          Hi, I am <span className="text-purple-400">Bhavika Pachauri</span>
+          Hi, I am <span className="text-purple-400 ">Bhavika Pachauri</span>
         </motion.h1>
         
         <motion.h2
@@ -298,7 +298,7 @@ const App = () => {
   <a 
     href="tel:844926898" 
     style={{textDecoration:"none"}}
-    className="inline-flex items-center justify-center bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform duration-300 hover:scale-105 no-underline"
+    className="inline-flex items-center justify-center bg-purple-600 text-white font-semibold py-2 px-3 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform duration-300 hover:scale-105 no-underline"
   >
     Hire Me
   </a>
@@ -308,7 +308,7 @@ const App = () => {
     rel="noopener noreferrer"
     style={{textDecoration:"none"}}
 
-    className="inline-flex items-center justify-center border-2 border-purple-600 text-purple-600 font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-purple-600 hover:text-white transition-transform transform duration-300 hover:scale-105 no-underline"
+    className="inline-flex items-center justify-center border-2 border-purple-600 text-purple-600 font-semibold py-2 px-3 rounded-lg shadow-lg hover:bg-purple-600 hover:text-white transition-transform transform duration-300 hover:scale-105 no-underline"
   >
     See My Resume
   </a>
@@ -841,18 +841,18 @@ const App = () => {
           transition={{ duration: 1.2 }}
         >
           <h3 className="text-xl mx-4 text-info   font-bold ">Contact</h3>
-          <ul className="space-y-2 ">
-            <li className="flex justify-start items-center space-x-2">
+          <ul className="space-y-2 mx-5 px-5">
+            <li className="flex justify-center items-center space-x-2">
               <FaMapMarkerAlt size={18} className="text-purple-300" />
-              <span className="text-white">Bah Road, Fatehabad, Agra</span>
+              <span className="text-white">Fatehabad,Agra</span>
             </li>
-            <li className="flex justify-start items-center space-x-2">
+            <li className="flex justify-center items-center space-x-2">
               <FaPhone size={18} className="text-purple-300" />
               <a href="tel:8449296898"  className="text-white" style={{ textDecoration: 'none' }}>8449296898</a>
             </li>
-            <li className="flex justify-start items-center space-x-2">
-              <FaEnvelope size={18} className="text-purple-300" />
-              <a href="mailto:bhavikapachauri02@gmail.com"  className="text-white" style={{ textDecoration: 'none' }}>bhavikapachauri02@gmail.com</a>
+            <li className="flex justify-center items-center space-x-2">
+              <CiMail size={18} className="text-purple-300" />
+              <a href="mailto:bhavikapachauri02@gmail.com"  className="text-white" style={{ textDecoration: 'none' }}>bhavika@gmail.com</a>
             </li>
           </ul>
         </motion.div>
